@@ -1,6 +1,44 @@
 // Theme toggle
 const themeToggle = document.querySelector(".theme-toggle");
 const body = document.body;
+const circle = document.getElementById("circle");
+const text = document.getElementById("text");
+
+Object.assign(circle.style, {
+  width: "50px",
+  height: "50px",
+  backgroundColor: "#3498db",
+  borderRadius: "30%",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  overflow: "hidden",
+  transition: "all 0.5s ease",
+  cursor: "pointer",
+  margin: "50px auto",
+});
+
+Object.assign(text.style, {
+  color: "white",
+  fontFamily: "'EL Messiri', sans-serif",
+  fontSize: "16px",
+  textAlign: "center",
+  padding: "0 20px",
+  opacity: "0",
+  transition: "opacity 0.5s ease",
+});
+
+circle.addEventListener("mouseover", () => {
+  circle.style.width = "620px";
+  circle.style.borderRadius = "50px";
+  text.style.opacity = "1";
+});
+
+circle.addEventListener("mouseout", () => {
+  circle.style.width = "50px";
+  circle.style.borderRadius = "50%";
+  text.style.opacity = "0";
+});
 
 themeToggle.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
@@ -153,3 +191,40 @@ particlesJS("particles-js", {
   },
   retina_detect: true,
 });
+const pianoKeys = document.querySelectorAll(".piano-keys .key");
+const volumeSlider = document.querySelector(".volume-slider input");
+const keysCheckBox = document.querySelector(".keys-checkbox input");
+
+let allkeys = [],
+  audio = new Audio("a.wav");
+const playTune = (key) => {
+  audio.src = `${key}.wav`;
+  audio.play();
+
+  const clickedKey = document.querySelector(`[data-key='${key}']`);
+  clickedKey.classList.add("active");
+  setTimeout(() => {
+    clickedKey.classList.remove("active");
+  }, 150);
+};
+
+pianoKeys.forEach((key) => {
+  allkeys.push(key.dataset.key);
+  key.addEventListener("click", () => playTune(key.dataset.key));
+});
+
+const handleVolume = (e) => {
+  audio.volume = e.target.value;
+};
+
+const showHideKeys = (e) => {
+  pianoKeys.forEach((key) => key.classList.toggle("hide"));
+};
+
+const pressedKey = (e) => {
+  if (allkeys.includes(e.key)) playTune(e.key);
+};
+
+keysCheckBox.addEventListener("click", showHideKeys);
+volumeSlider.addEventListener("input", handleVolume);
+document.addEventListener("keydown", pressedKey);
