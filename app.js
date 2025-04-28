@@ -6,13 +6,13 @@ const text = document.getElementById("text");
 
 // Circle styles
 Object.assign(circle.style, {
-  width: "4px",
+  width: "40px",
   height: "40px",
   backgroundColor: "#3498db",
   borderRadius: "30%",
   display: "flex",
-  justifyContent: "left",
-  alignItems: "left",
+  justifyContent: "center",
+  alignItems: "center",
   overflow: "hidden",
   transition: "all 0.5s ease",
   cursor: "pointer",
