@@ -12,7 +12,6 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Luxurious+Roman&display=swap");
     </style>
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <nav class="navbar">
@@ -22,6 +21,7 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#piano-project">Piano</a>
         <a href="#contact">Contact</a>
       </div>
       <button class="theme-toggle">🌓</button>
@@ -53,7 +53,6 @@
             playsinline
           ></video>
         </div>
-
         <div class="about-text">
           <h3>Machine Learning Engineer & Developer</h3>
           <p>
@@ -77,11 +76,15 @@
             tutorials.
           </p>
           <p>
-            I'm a dedicated Frontend Developer and Python Enthusiast with a passion for building dynamic, user-friendly applications. With expertise in JavaScript, React, and Python, I strive to create clean, efficient, and impactful solutions that enhance user experiences.
-
-My journey in programming began with a fascination for how websites and applications come to life through code. Today, I focus on developing interactive web applications using React, writing clean and maintainable JavaScript, and leveraging Python for backend tasks, automation, and data processing.
-
-
+            I'm a dedicated Frontend Developer and Python Enthusiast with a
+            passion for building dynamic, user-friendly applications. With
+            expertise in JavaScript, React, and Python, I strive to create
+            clean, efficient, and impactful solutions that enhance user
+            experiences. My journey in programming began with a fascination for
+            how websites and applications come to life through code. Today, I
+            focus on developing interactive web applications using React,
+            writing clean and maintainable JavaScript, and leveraging Python for
+            backend tasks, automation, and data processing.
           </p>
           <a href="#contact" class="cta-button">Contact Me</a>
         </div>
@@ -247,6 +250,46 @@ My journey in programming began with a fascination for how websites and applicat
       </div>
     </section>
 
+    <section id="piano-project" class="fade-in">
+      <div id="circle" class="circle">
+        <p id="text" class="text">
+          برای نواختن پیانو هم میتونید از موس با کلیک استفاده کنید و هم با دکمه
+          های کیبورد (:
+        </p>
+      </div>
+      <h2 class="section-title">Piano</h2>
+      <div class="wrapper">
+        <header>
+          <h2>YAMAHA</h2>
+          <div class="column volume-slider">
+            <span>Volume</span>
+            <input type="range" min="0" max="1" value="0.5" step="any" />
+          </div>
+          <div class="column keys-checkbox">
+            <span>Show Keys</span> <input type="checkbox" checked />
+          </div>
+        </header>
+        <ul class="piano-keys">
+          <li class="key white" data-key="a"><span>a</span></li>
+          <li class="key black" data-key="w"><span>w</span></li>
+          <li class="key white" data-key="s"><span>s</span></li>
+          <li class="key black" data-key="e"><span>e</span></li>
+          <li class="key white" data-key="d"><span>d</span></li>
+          <li class="key white" data-key="f"><span>f</span></li>
+          <li class="key black" data-key="t"><span>t</span></li>
+          <li class="key white" data-key="g"><span>g</span></li>
+          <li class="key black" data-key="y"><span>y</span></li>
+          <li class="key white" data-key="h"><span>h</span></li>
+          <li class="key black" data-key="u"><span>u</span></li>
+          <li class="key white" data-key="j"><span>j</span></li>
+          <li class="key white" data-key="k"><span>k</span></li>
+          <li class="key black" data-key="o"><span>o</span></li>
+          <li class="key white" data-key="l"><span>l</span></li>
+          <li class="key black" data-key="p"><span>p</span></li>
+          <li class="key white" data-key=";"><span>;</span></li>
+        </ul>
+      </div>
+    </section>
     <section id="contact" class="fade-in">
       <h2 class="section-title">Contact Me</h2>
       <div class="contact-container">
@@ -255,14 +298,14 @@ My journey in programming began with a fascination for how websites and applicat
             <div class="contact-icon">📧</div>
             <div class="contact-details">
               <h4>Email</h4>
-              <a href="">######</a>
+              <a href="mailto:your.email@example.com">your.email@example.com</a>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon">📱</div>
             <div class="contact-details">
               <h4>Phone</h4>
-              <p>+###########</p>
+              <p>+1234567890</p>
             </div>
           </div>
           <div class="contact-item">
@@ -316,6 +359,7 @@ My journey in programming began with a fascination for how websites and applicat
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
+          <a href="#piano-project">Piano</a>
           <a href="#contact">Contact</a>
         </div>
         <div class="social-links">
