@@ -15,7 +15,7 @@ Object.assign(circle.style, {
   overflow: "hidden",
   transition: "all 1s ease",
   cursor: "pointer",
-  margin: "50px",
+  margin: "50px auto",
   
 });
 
