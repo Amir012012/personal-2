@@ -6,13 +6,13 @@ const text = document.getElementById("text");
 
 // Circle styles
 Object.assign(circle.style, {
-  width: "50px",
-  height: "50px",
+  width: "4px",
+  height: "40px",
   backgroundColor: "#3498db",
   borderRadius: "30%",
   display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+  justifyContent: "left",
+  alignItems: "left",
   overflow: "hidden",
   transition: "all 0.5s ease",
   cursor: "pointer",
@@ -33,7 +33,7 @@ Object.assign(text.style, {
 // Circle hover effects
 circle.addEventListener("mouseover", () => {
   circle.style.width = "620px";
-  circle.style.borderRadius = "50px";
+  circle.style.borderRadius = "40px";
   text.style.opacity = "1";
 });
 
