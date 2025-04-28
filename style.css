@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap");
 :root {
   --primary-color: #3498db;
   --secondary-color: #2c3e50;
@@ -27,7 +28,7 @@ body.dark-mode {
   color: #f9f9f9;
 }
 
-header {
+header#home {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -345,7 +346,6 @@ section {
   transform: scale(1.1);
 }
 
-
 .project-info {
   padding: 20px;
 }
@@ -622,10 +622,6 @@ footer {
     z-index: 1000;
   }
 
-  .projects-container {
-    grid-template-columns: 1fr;
-  }
-
   .hero-title {
     font-size: 2.5rem;
   }
@@ -635,7 +631,6 @@ footer {
   }
 }
 
-/* Animation class */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -645,4 +640,189 @@ footer {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+#piano-project {
+  font-family: "Ubuntu", sans-serif;
+
+  padding-bottom: 100px;
+}
+
+.dark-mode #piano-project {
+  background-color: var(--dark-bg);
+}
+.piano-text {
+  margin: auto;
+  background-color: rgb(69, 74, 209);
+  display: inline-block;
+}
+
+#piano-project .wrapper {
+  background: #141414;
+  padding: 35px 40px;
+  border-radius: 20px;
+  max-width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0px 40px rgba(224, 205, 205, 0.613);
+}
+
+#piano-project .wrapper header {
+  color: #b2b2b2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 0;
+}
+
+#piano-project .wrapper header h2 {
+  font-size: 1.6rem;
+  margin-right: 50px;
+  color: #b2b2b2;
+  position: static;
+  transform: none;
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+}
+#piano-project .wrapper header h2::after {
+  display: none;
+}
+
+#piano-project .wrapper header .column {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+#piano-project .wrapper header .column span {
+  font-weight: 500;
+  margin-right: 15px;
+  font-size: 1.19rem;
+  color: #b2b2b2;
+}
+#piano-project .volume-slider input {
+  outline: none;
+  accent-color: #fff;
+  margin-right: 15px;
+}
+#piano-project .keys-checkbox input {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background: #4b4b4b;
+  appearance: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+#piano-project .keys-checkbox input:before {
+  content: "";
+  position: absolute;
+  background: #8c8c8c;
+  width: 20px;
+  height: 20px;
+  border-radius: inherit;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+#piano-project .keys-checkbox input:checked::before {
+  left: 35px;
+  background: #fff;
+}
+#piano-project .piano-keys {
+  display: flex;
+  margin-top: 40px;
+  padding: 0;
+  list-style: none;
+}
+#piano-project .piano-keys .key {
+  list-style: none;
+  position: relative;
+  color: #a2a2a2;
+  text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+
+  display: block;
+}
+#piano-project .piano-keys .white {
+  width: 70px;
+  height: 230px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background: linear-gradient(#fff 96%, #eee 4%);
+}
+#piano-project .piano-keys .white.active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+}
+#piano-project .piano-keys .black {
+  width: 44px;
+  height: 144px;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(#333, #000);
+  margin: 0 -22px 0 -22px;
+  z-index: 2;
+}
+#piano-project .piano-keys .black.active {
+  box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom, #000, #434343);
+}
+
+#piano-project .piano-keys span {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  font-size: 1.13rem;
+  text-align: center;
+  color: #a2a2a2;
+}
+#piano-project .piano-keys .key.hide span {
+  display: none;
+}
+
+@media screen and (max-width: 815px) {
+  #piano-project .wrapper {
+    padding: 25px;
+  }
+
+  #piano-project .wrapper header {
+    flex-direction: column;
+  }
+  #piano-project .wrapper header :where(h2, .column) {
+    margin-bottom: 13px;
+  }
+  #piano-project .volume-slider input {
+    max-width: 100px;
+  }
+  #piano-project .piano-keys {
+    margin-top: 20px;
+  }
+  #piano-project .piano-keys .key:where(:nth-child(9), :nth-child(10)) {
+    display: none;
+  }
+  #piano-project .piano-keys .black {
+    height: 100px;
+    width: 40px;
+    margin: 0 -20px 0 -20px;
+  }
+  #piano-project .piano-keys .white {
+    height: 180px;
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  #piano-project .piano-keys .key:nth-child(13),
+  #piano-project .piano-keys .key:nth-child(14),
+  #piano-project .piano-keys .key:nth-child(15),
+  #piano-project .piano-keys .key:nth-child(16),
+  #piano-project .piano-keys .key:nth-child(17) {
+    display: none;
+  }
+  #piano-project .piano-keys .white {
+    width: 50px;
+  }
 }
