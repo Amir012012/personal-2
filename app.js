@@ -4,6 +4,7 @@ const body = document.body;
 const circle = document.getElementById("circle");
 const text = document.getElementById("text");
 
+// Circle styles
 Object.assign(circle.style, {
   width: "50px",
   height: "50px",
@@ -18,6 +19,7 @@ Object.assign(circle.style, {
   margin: "50px auto",
 });
 
+// Text styles
 Object.assign(text.style, {
   color: "white",
   fontFamily: "'EL Messiri', sans-serif",
@@ -28,6 +30,7 @@ Object.assign(text.style, {
   transition: "opacity 0.5s ease",
 });
 
+// Circle hover effects
 circle.addEventListener("mouseover", () => {
   circle.style.width = "620px";
   circle.style.borderRadius = "50px";
@@ -40,6 +43,7 @@ circle.addEventListener("mouseout", () => {
   text.style.opacity = "0";
 });
 
+// Theme toggle click event
 themeToggle.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
   themeToggle.textContent = body.classList.contains("dark-mode") ? "☀️" : "🌓";
@@ -191,12 +195,15 @@ particlesJS("particles-js", {
   },
   retina_detect: true,
 });
+
+// Piano
 const pianoKeys = document.querySelectorAll(".piano-keys .key");
 const volumeSlider = document.querySelector(".volume-slider input");
 const keysCheckBox = document.querySelector(".keys-checkbox input");
 
 let allkeys = [],
-  audio = new Audio("a.wav");
+    audio = new Audio("a.wav");
+
 const playTune = (key) => {
   audio.src = `${key}.wav`;
   audio.play();
