@@ -4,22 +4,21 @@ const body = document.body;
 const circle = document.getElementById("circle");
 const text = document.getElementById("text");
 
-// Circle styles
 Object.assign(circle.style, {
-  width: "40px",
-  height: "40px",
+  width: "50px",
+  height: "50px",
   backgroundColor: "#3498db",
-  borderRadius: "30%",
+  borderRadius: "50%",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   overflow: "hidden",
-  transition: "all 0.5s ease",
+  transition: "all 1s ease",
   cursor: "pointer",
-  margin: "50px auto",
+  margin: "50px",
+  
 });
 
-// Text styles
 Object.assign(text.style, {
   color: "white",
   fontFamily: "'EL Messiri', sans-serif",
@@ -27,23 +26,24 @@ Object.assign(text.style, {
   textAlign: "center",
   padding: "0 20px",
   opacity: "0",
-  transition: "opacity 0.5s ease",
+  transition: "opacity 2s ease",
 });
 
-// Circle hover effects
 circle.addEventListener("mouseover", () => {
-  circle.style.width = "620px";
-  circle.style.borderRadius = "40px";
+  circle.style.width = "210px";
+  circle.style.height = "120px";
+  circle.style.borderRadius = "50px";
   text.style.opacity = "1";
+
 });
 
 circle.addEventListener("mouseout", () => {
   circle.style.width = "50px";
+  circle.style.height = "50px";
   circle.style.borderRadius = "50%";
   text.style.opacity = "0";
 });
 
-// Theme toggle click event
 themeToggle.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
   themeToggle.textContent = body.classList.contains("dark-mode") ? "☀️" : "🌓";
@@ -195,15 +195,12 @@ particlesJS("particles-js", {
   },
   retina_detect: true,
 });
-
-// Piano
 const pianoKeys = document.querySelectorAll(".piano-keys .key");
 const volumeSlider = document.querySelector(".volume-slider input");
 const keysCheckBox = document.querySelector(".keys-checkbox input");
 
 let allkeys = [],
-    audio = new Audio("a.wav");
-
+  audio = new Audio("a.wav");
 const playTune = (key) => {
   audio.src = `${key}.wav`;
   audio.play();
