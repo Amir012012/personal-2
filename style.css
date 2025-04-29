@@ -62,7 +62,7 @@ header#home {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 10px 40px;
   z-index: 100;
   transition: all 0.3s ease;
   background-color: rgba(175, 178, 178, 0.224);
