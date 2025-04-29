@@ -46,7 +46,7 @@ circle.addEventListener("mouseout", () => {
 
 themeToggle.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
-  themeToggle.textContent = body.classList.contains("dark-mode") ? "☀️" : "🌓";
+  themeToggle.textContent = body.classList.contains("dark-mode") ? "🌞" : "🌚";
 
   // Save theme preference
   if (body.classList.contains("dark-mode")) {
@@ -59,7 +59,7 @@ themeToggle.addEventListener("click", () => {
 // Check for saved theme preference
 if (localStorage.getItem("theme") === "dark") {
   body.classList.add("dark-mode");
-  themeToggle.textContent = "☀️";
+  themeToggle.textContent = "🌞";
 }
 
 // Mobile menu toggle
