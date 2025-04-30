@@ -102,7 +102,7 @@ document.querySelectorAll(".fade-in").forEach((element) => {
 particlesJS("particles-js", {
   particles: {
     number: {
-      value: 80,
+      value: 100,
       density: {
         enable: true,
         value_area: 800,
@@ -182,7 +182,7 @@ particlesJS("particles-js", {
         speed: 3,
       },
       repulse: {
-        distance: 200,
+        distance: 120,
         duration: 0.4,
       },
       push: {
