@@ -199,6 +199,11 @@ h2 {
   background-color: #fee2e2;
   transform: scale(1.1);
 }
+@media (max-width: 768px) {
+  .transaction .delete-btn {
+    opacity: 1;
+  }
+}
 
 .form-container {
   background: linear-gradient(135deg, #f6f8fb);
