@@ -113,6 +113,33 @@ header#home {
 .nav-links a:hover:after {
   width: 100%;
 }
+.sepordeh {
+  padding: 0 10px;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 8px;
+  text-transform: uppercase;
+  background: linear-gradient(
+    to right,
+    #4acfee,
+    #53f8c9,
+    #02d79a,
+    #6070fd,
+    #2a46ff,
+    #0099ff,
+    #4acfee
+  );
+  background-size: 200%;
+  /* background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+  animation: animate-gradient 2.5s linear infinite;
+}
+@keyframes animate-gradient {
+  to {
+    background-position: 200%;
+  }
+}
 
 .theme-toggle {
   background: none;
